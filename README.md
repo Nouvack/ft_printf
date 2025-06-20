@@ -1,21 +1,7 @@
 
 <h1 align="center">ft_printf</h1>
 
-<svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00c6ff"/>
-      <stop offset="100%" stop-color="#0072ff"/>
-    </linearGradient>
-  </defs>
-  <rect width="100%" height="100%" fill="#0f0f0f"/>
-  <text x="50%" y="50%" font-family="Fira Code, monospace" font-size="48" fill="url(#grad)" text-anchor="middle" dominant-baseline="middle">
-    ➜ ft_printf
-  </text>
-  <text x="50%" y="80%" font-family="Fira Code, monospace" font-size="16" fill="#888" text-anchor="middle">
-    Re-implementation of printf() in C – 42 Cursus
-  </text>
-</svg>
+
 
 
 ---
