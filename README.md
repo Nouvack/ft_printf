@@ -1,101 +1,133 @@
-<p align="center">
-  <img src="./A_digital_graphic_design_features_the_text_\"__ft_p.png" alt="ft_printf banner" width="600"/>
-</p>
 
-<h1 align="center">✨ ft_printf ✨</h1>
-
-<p align="center">
-  <em>Una implementación personalizada de la mítica función <code>printf</code> de C</em><br>
-  <sub>Desarrollado como parte del core curriculum en <strong>42 School Madrid</strong></sub>
-</p>
+<h1 align="center">ft_printf</h1>
+<p align="center"><em>A custom implementation of the C standard function <code>printf</code> for the 42 Cursus</em></p>
 
 ---
 
-## 🚀 Descripción
+## 🧠 Project Overview
 
-`ft_printf` es una versión simplificada de la función `printf` de la biblioteca estándar de C. Esta implementación permite comprender el funcionamiento interno del formateo de strings, manejo de argumentos variables, impresión de diferentes tipos de datos y modularización de código.
-
----
-
-## 🔧 Especificaciones Soportadas
-
-| Especificador | Descripción                    |
-|---------------|--------------------------------|
-| `%c`          | Carácter                       |
-| `%s`          | Cadena de texto                |
-| `%p`          | Puntero (en hexadecimal)       |
-| `%d` / `%i`   | Entero con signo               |
-| `%u`          | Entero sin signo               |
-| `%x` / `%X`   | Hexadecimal (min/mayúsculas)   |
-| `%%`          | Porcentaje literal             |
+`ft_printf` is a lightweight recreation of the original `printf` function from the C Standard Library. Built as part of the 42 School curriculum, it aims to deepen understanding of **variadic functions**, **string formatting**, and **memory-safe logic**. The goal is not only to replicate the function but to do so in a modular and extensible way that respects the strict constraints of the 42 Norm.
 
 ---
 
-## 🗂️ Estructura del Proyecto
+## 🔑 Key Concepts
 
-```
-ft_printf/
-├── src/
-│   ├── ft_printf.c       # Función principal
-│   ├── ft_printf.h       # Header con prototipos
-│   ├── ft_putchar.c      # Imprimir carácter
-│   ├── ft_putstr.c       # Imprimir cadena
-│   ├── ft_putnbr.c       # Imprimir número
-│   ├── ft_putptr.c       # Imprimir puntero
-│   └── ft_puthexa.c      # Imprimir hexadecimal
-└── Makefile              # Compilación del proyecto
-```
+- Variadic functions using `<stdarg.h>`
+- Format specifier parsing and dispatch
+- Memory-safe and modular design
+- Handling edge cases and undefined behaviors
+- Unix-based C development and compilation
 
 ---
 
-## ⚙️ Compilación y Uso
+## ✅ Supported Format Specifiers
+
+| Specifier | Description                            |
+|-----------|----------------------------------------|
+| `%c`      | Print a single character               |
+| `%s`      | Print a null-terminated string         |
+| `%p`      | Print a memory address in hex format   |
+| `%d` / `%i` | Print a signed decimal integer       |
+| `%u`      | Print an unsigned decimal integer      |
+| `%x` / `%X` | Print an integer in hexadecimal      |
+| `%%`      | Print a literal percent sign           |
+
+---
+
+## 🚫 Bonus (Not Implemented)
+
+Although considered for expansion, the following features were **not implemented** in this version:
+
+- Flag handling (`-`, `0`, `.`, width, precision)
+- Format modifiers (`#`, `+`, space)
+- Field padding and justification
+- Positional parameters
+
+---
+
+## 🧪 How to Use
+
+### 📦 Requirements
+
+- A C compiler (gcc or clang)
+- `make`
+
+### 🛠️ Build
 
 ```bash
+git clone https://github.com/Nouvack/ft_printf.git
+cd ft_printf
 make
 ```
 
-Luego úsalo en tu código:
+### 📄 Example
 
 ```c
 #include "ft_printf.h"
 
-int main(void) {
-    ft_printf("Hola %s, número: %d\n", "mundo", 42);
+int main(void)
+{
+    ft_printf("Hello, %s! The number is %d in hex: %x\n", "world", 42, 42);
     return 0;
 }
 ```
 
-Compílalo con:
+Compile with:
 
 ```bash
-gcc main.c libftprintf.a -o test
-./test
+gcc main.c libftprintf.a -o run
+./run
 ```
 
 ---
 
-## 🧪 Resultado Esperado
+## 🧩 Example Outputs
+
+| Input                                         | Output                       |
+|----------------------------------------------|------------------------------|
+| `ft_printf("Hello %s!", "world");`           | `Hello world!`               |
+| `ft_printf("Number: %d", 42);`               | `Number: 42`                 |
+| `ft_printf("Hex: %x", 255);`                 | `Hex: ff`                    |
+| `ft_printf("Pointer: %p", &ptr);`            | `Pointer: 0x...`             |
+| `ft_printf("Percent: %%");`                  | `Percent: %`                 |
+
+---
+
+## 🧱 Project Structure
 
 ```
-Hola mundo, número: 42
+ft_printf/
+├── src/
+│   ├── ft_printf.c
+│   ├── ft_printf.h
+│   ├── ft_putchar.c
+│   ├── ft_putstr.c
+│   ├── ft_putnbr.c
+│   ├── ft_putptr.c
+│   └── ft_puthexa.c
+└── Makefile
 ```
 
 ---
 
-## 📜 Licencia
+## 🧠 What I Learned
 
-Distribuido bajo la licencia MIT. Ver el archivo `LICENSE` para más detalles.
+- 📚 **Variadic Functions**: Mastering `va_start`, `va_arg`, and `va_end`.
+- ✨ **Format Handling**: Building a parser-dispatcher logic.
+- 🧼 **Memory Discipline**: Handling NULLs, errors, and edge cases with rigor.
+- ⚔️ **Unix Logic**: Command-line tools, Makefiles, and C compilation.
 
 ---
 
-## 🧑‍💻 Autor
+## 👤 Author
 
 **Noam Novack**  
-Estudiante en 42 Madrid  
-GitHub: [@Nouvack](https://github.com/Nouvack)
+42 Madrid Student  
+GitHub: [@Nouvack](https://github.com/Nouvack)  
+42 Login: `nsantand`
 
 ---
 
-<p align="center">
-  <em>Hecho con 💙 y muchos printf("debug")</em>
-</p>
+## 💬 Acknowledgments
+
+This project is part of the [42 Cursus](https://42.fr/en/homepage/), a challenging and peer-driven programming program. Special thanks to peers and code reviewers at 42 Madrid who helped refine and debug the implementation. 🙌
