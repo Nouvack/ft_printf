@@ -1,7 +1,9 @@
 
 <h1 align="center">ft_printf</h1>
 
-
+<p align="center">
+  <img src="./banner.svg" alt="ft_printf banner"/>
+</p>
 
 
 ---
