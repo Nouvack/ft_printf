@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SRC = ft_printf.c ft_putchar.c  ft_puthexa.c  ft_putnbr.c  ft_putptr.c  ft_putstr.c  
+SRC = src/ft_printf.c src/ft_putchar.c  src/ft_puthexa.c  src/ft_putnbr.c  src/ft_putptr.c  src/ft_putstr.c  
 OBJ = $(SRC:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
